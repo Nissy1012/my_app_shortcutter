@@ -12,7 +12,7 @@ class Post extends Model
     use HasFactory;
     
     protected $filable = [
-       'user_id','place', 'station', 'address',
+       'user_id','place', 'station', 'address', 'image_url'
     ];
         
     public function user(){
@@ -35,6 +35,7 @@ class Post extends Model
     'station',
     'body',
     'address',
+    'image_url',
     ];
 
 }

@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->nullable();
+            //constrained();
             $table->string('place',50);
             $table->string('station',50);
             $table->string('address',100);
             $table->string('body',200);
-            $table->string('image_path')->nullable();
+            $table->string('image_url');
             $table->timestamps();
         });
     }
