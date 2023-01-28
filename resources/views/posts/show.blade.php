@@ -17,8 +17,11 @@
                 <p>{{ $post->body }}</p>    
             </div>
         </div>
+        <div>
+            <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
+        </div>
         <div class="footer">
-            <a href="/">戻る</a>
+            <a href="/posts">戻る</a>
         </div>
     </body>
 </html>

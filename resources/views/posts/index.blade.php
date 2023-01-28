@@ -8,12 +8,25 @@
     </head>
     <body>
        <h1>Shortcutter</h1>
-       <form action="{{ route('posts.index') }}" method="GET">
+       <form action="{{ route('index') }}" method="GET">
             <input type="text" name="keyword" value="{{$keyword}}">
             <div>
                 <input type="submit" value="検索">
             </div>
         </form>
+        <table>
+            <tr>
+                <th>目的地</th><th>最寄駅</th>
+            </tr>
+            @forelse ($match_posts as $post)
+                <tr>
+                    <td>{{ $post->place}}</td>
+                    <td>{{ $post->station}}</td>
+                </tr>
+            @empty
+                <td>No posts!!</td>
+            @endforelse
+        </table>
         <h2><a href='/posts/create'>create</a></h2>
         
         <table>

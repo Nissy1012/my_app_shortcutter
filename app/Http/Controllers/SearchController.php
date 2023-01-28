@@ -24,3 +24,4 @@ class SearchController extends Controller
         return view('index', compact('posts','keyword'));
     }
 }
+?>
